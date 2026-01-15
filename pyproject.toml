@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "json-query"
+version = "0.1.0"
+dependencies = ["duckdb>=0.10.0"]
+
+[project.scripts]
+json-query = "json_query.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["json_query*"]
